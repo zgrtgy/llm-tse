@@ -1,0 +1,60 @@
+You will be provided with a Reddit conversation as a list of posts, each labeled by type: "Submission" (opening post with a title), "Parent" (post replied to by the focus post), "Focus" (the post to be classified), and optionally "Children" (direct replies to the focus post), "Ancestor" (higher-level posts further up the conversation), and "Earlier_Sibling" or "Later_Sibling" (posts at the same conversation level as the focus, posted before or after).
+
+Your task is to identify the **target** and the **stance** expressed toward it in the **Focus** post, using the predefined list of political targets at the end.
+
+Only classify stances related to a target from the list. If the Focus post refers to a similar target with different wording, select the exact matching entry from the list.  
+**Do not rename, paraphrase, or invent new target names.**  
+- If the Focus post refers to a target not on the list, label it **"Other"**.  
+- If no political target is mentioned, label it **"None"**.  
+
+Use other types of posts **only** to resolve ambiguity and contextual understanding (e.g., resolving pronouns or vague references). **Infer the stance based only on the Focus post.**
+
+---
+## Context Weighting
+
+When using context, prioritize in the following order:
+1. Children
+2. Parent
+3. Ancestors
+4. Earlier and Later Siblings
+
+## Classification Steps
+
+1. **Identify the Political Target**  
+   - Choose a target from the predefined list at the end.  
+   - If the Focus post refers to a target not on the list, label it **"Other"**.  
+   - If no target is mentioned, label it **"None"** and skip stance classification.
+
+2. **Determine the Stance** (only if a target is identified)  
+   - **Positive**: clear support or praise  
+   - **Neutral**: mention without a clear stance  
+   - **Negative**: criticism or disapproval
+   - **None**: no stance can be identified
+
+3. **Return the classification**
+
+---
+
+## Output Format
+
+Your response must be a JSON object with the following fields:
+- "target" (string): The identified political target, from the list of Predefined Targets.
+- "stance" (string): The determined stance. Must be one of: "Positive", "Neutral", "Negative", or "None".
+- "confidence" (float): A confidence score between 0.0 and 1.0 (inclusive) representing how certain the model is about its classification.
+
+Example JSON output if a target and stance are identified:
+```json
+(
+  "target": "Donald Trump",
+  "stance": "Positive",
+  "confidence": 0.95
+)
+
+
+---
+
+## Predefined Targets
+
+{predefined_targets}
+
+(Use the exact wording. Do not rename, paraphrase, or invent targets.)

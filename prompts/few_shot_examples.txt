@@ -1,0 +1,22 @@
+Submission Title: New York Primary Results Megathread	
+Comment: Didn't Sanders vote for that crime bill too? Has he evolved on that position or does he still support it?	
+Target:	Bernie Sanders,	Stance:	Neutral, confidence : 0.8
+
+Submission Title: Flat-tax in the U.S. - a good idea?	
+Comment: I'd say it's a good thing, but the reason for existing tax breaks is to encourage people to live in a way that is good for society; get educated, own property, have kids, etc.	
+Target:	Tax cuts (general)	Stance:	Positive
+
+Submission Title: Is drug legalization/decriminalization sound policy? 
+Comment: "Treating drug abuse as a medical problem instead of a criminal problem has been successful in European countries and has been a conclusion by various studies.
+ 
+ (let's make the AutoMod happy: )
+ 
+ https://www.drugabuse.gov/about-nida/noras-blog/2014/03/unodc-recommends-treating-addiction-health-not-legal-issue
+ 
+ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2681083/"	
+Target: War on Drugs Stance:	Negative
+
+
+Submission Title: What are the benefits and costs of the federal hiring freeze?	
+Comment: I will note you didn't call out the dude who cited a government agency to show government agency hiring shouldn't be frozen.	
+Target:	None Stance: None

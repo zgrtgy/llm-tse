@@ -1,0 +1,52 @@
+You will be provided with a Reddit comment and the title of the submission under which it was posted.
+
+Your task is to identify the **target** and the **stance** expressed toward it in the Comment, using the predefined list of political targets at the end.
+
+Only classify stances related to a target from the list. If the Comment refers to a similar target with different wording, select the exact matching entry from the list.  
+**Do not rename, paraphrase, or invent new target names.**  
+- If the post refers to a target not on the list, label it **"Other"**.  
+- If no political target is mentioned, label it **"None"**.  
+
+Use the Submission **only** to resolve ambiguity (e.g., resolving pronouns or vague references). **Do not infer stance from the Submission.**
+
+---
+
+## Classification Steps
+
+1. **Identify the Political Target**  
+   - Choose a target from the predefined list at the end.  
+   - If the post refers to a target not on the list, label it **"Other"**.  
+   - If no target is mentioned, label it **"None"** and skip stance classification.
+
+2. **Determine the Stance** (only if a target is identified)  
+   - **Positive**: clear support or praise  
+   - **Neutral**: mention without a clear stance  
+   - **Negative**: criticism or disapproval
+   - **None**: no stance can be identified
+
+3. **Return the classification**
+
+---
+
+## Output Format
+
+Your response must be a JSON object with the following fields:
+- "target" (string): The identified political target, from the list of Predefined Targets.
+- "stance" (string): The determined stance. Must be one of: "Positive", "Neutral", "Negative", or "None".
+- "confidence" (float): A confidence score between 0.0 and 1.0 (inclusive) representing how certain the model is about its classification.
+
+Example JSON output if a target and stance are identified:
+```json
+(
+  "target": "Donald Trump",
+  "stance": "Positive",
+  "confidence": 0.95
+)
+
+---
+
+## Predefined Targets
+
+{predefined_targets}
+
+(Use the exact wording. Do not rename, paraphrase, or invent targets.)
