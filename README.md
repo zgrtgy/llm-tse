@@ -1,4 +1,4 @@
-Supplementary materials for the paper **'Large Language Models Unpack Complex Political Opinions through Target-Stance Extraction.'  **
+Supplementary materials for the paper **'Large Language Models Unpack Complex Political Opinions through Target-Stance Extraction.'**
 Includes the prompts used in benchmarks, the annotated stance-detection dataset, the annotator codebook, and the codebase.
 
 'Codebook' includes the codebook used by the annotators.
