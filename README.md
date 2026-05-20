@@ -1,9 +1,9 @@
-Supplementary materials for the paper 'Large Language Models Unpack Complex Political Opinions through Target-Stance Extraction.'  
+Supplementary materials for the paper **'Large Language Models Unpack Complex Political Opinions through Target-Stance Extraction.'  **
 Includes the prompts used in benchmarks, the annotated stance-detection dataset, the annotator codebook, and the codebase.
 
 'Codebook' includes the codebook used by the annotators.
 
-'Data' includes four files:
+**'Data'** includes four files:
 - **test_main.csv** is the **_'gold test set'_** used in the benchmarks. It includes 200 annotated posts from r/NeutralPolitics, along with the titles of the submissions they were posted under. The labels for these posts were agreed upon in a blind annotation task by two annotators and further validated by an expert.
 - **test_broad.csv** contains the same posts, with Target labels mapped to broader labels where necessary. Refer to the paper for details and the codebook for the mapping schema.
 - **test_cf.csv** also includes the surrounding thread of the post being labeled, used in the Conversational Context technique.
